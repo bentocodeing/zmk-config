@@ -21,7 +21,7 @@
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RALT)>;
+            mods = <(MOD_RSFT)>;
         };
     };
 
