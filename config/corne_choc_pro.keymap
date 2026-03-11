@@ -5,7 +5,9 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/rgb.h>
 
 / {
     chosen { zmk,physical-layout = &default_layout; };
@@ -24,7 +26,7 @@
     };
 
     macros {
-        ctrl_c: ctrl_c {
+        ctrl_shift_c: ctrl_c {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -36,7 +38,7 @@
             label = "CTRL_C";
         };
 
-        ctrl_v: ctrl_v {
+        ctrl_shift_v: ctrl_v {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -48,16 +50,52 @@
             label = "CTRL_V";
         };
 
-        ctrl_b: ctrl_b {
+        ctrl_b_tmux: ctrl_b {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LCTRL &kp LEFT_SHIFT &kp B>,
+                <&kp LCTRL &kp B>,
                 <&macro_release>,
-                <&kp LEFT_CONTROL &kp LEFT_SHIFT &kp B>;
+                <&kp LEFT_CONTROL &kp B>;
 
             label = "CTRL_B";
+        };
+
+        ctrl_b_p_tmux: ctrl_b_p_tmux {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp B &kp P>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL &kp B &kp P>;
+
+            label = "CTRL_B_P_TMUX";
+        };
+
+        ctrl_b_n_tmux: ctrl_b_n_tmux {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp B &kp N>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL &kp B &kp N>;
+
+            label = "CTRL_B_N_TMUX";
+        };
+
+        ctrl_b_w_tmux: ctrl_b_w_tmux {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp B &kp W>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL &kp B &kp W>;
+
+            label = "CTRL_B_W_TMUX";
         };
     };
 
@@ -93,10 +131,10 @@
             //                    | GUI |     | SPC   |        | ENT   |     | ALT |
 
             bindings = <
-&trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &none  &none  &kp HOME      &kp PAGE_DOWN      &kp PAGE_UP      &kp END             &kp INSERT  &trans
-&trans  &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &none  &none  &kp LEFT      &kp DOWN           &kp UP           &kp RIGHT           &trans      &trans
-&trans  &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans                &kp C_REWIND  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_FAST_FORWARD  &kp K_MUTE  &trans
-                              &trans        &trans        &trans                &trans        &trans             &trans
+&kp PLUS      &kp MINUS     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none      &none  &none  &kp HOME      &kp PAGE_DOWN      &kp PAGE_UP      &kp END             &kp INSERT  &kp PRINTSCREEN
+&kp ASTERISK  &kp KP_SLASH  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none      &none  &none  &kp LEFT      &kp DOWN           &kp UP           &kp RIGHT           &none       &none
+&kp PERCENT   &none         &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL                &kp C_REWIND  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_FAST_FORWARD  &kp K_MUTE  &none
+                                          &trans        &trans        &trans                   &trans        &trans             &trans
             >;
         };
 
@@ -105,7 +143,7 @@
             bindings = <
 &kp TILDE      &kp LEFT_PARENTHESIS  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH   &kp RIGHT_PARENTHESIS  &trans  &trans  &kp GRAVE  &none   &none   &none  &none  &none
 &kp EQUAL      &kp LEFT_BRACKET      &kp DOLLAR       &kp PERCENT   &kp CARET  &kp RIGHT_BRACKET      &trans  &trans  &kp PLUS   &none   &none   &none  &none  &none
-&kp BACKSLASH  &kp LEFT_BRACE        &kp AMPERSAND    &kp ASTERISK  &kp MINUS  &kp RIGHT_BRACE                        &kp PIPE   &none   &none   &none  &none  &none
+&kp BACKSLASH  &kp LEFT_BRACE        &kp AMPERSAND    &kp ASTERISK  &kp MINUS  &kp RIGHT_BRACE                        &kp PIPE   &none   &none   &none  &none  &kp RSHIFT
                                                       &trans        &trans     &trans                                 &trans     &trans  &trans
             >;
         };
@@ -113,10 +151,10 @@
         function_layer {
             display-name = "FUNCTION";
             bindings = <
-&trans  &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp F7  &kp F8  &kp F9  &kp F12                  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans                   &trans  &trans  &trans
+&rgb_ug RGB_TOG  &rgb_ug RGB_HUI  &kp F1  &kp F2  &kp F3  &kp F10  &trans  &trans  &none           &kp LS(K_COPY)  &kp LS(K_PASTE)  &kp LS(K_CUT)   &none       &none
+&bt BT_NXT       &rgb_ug RGB_EFF  &kp F4  &kp F5  &kp F6  &kp F11  &trans  &trans  &kp K_REDO      &kp K_COPY      &kp K_PASTE      &kp K_CUT       &kp K_UNDO  &none
+&kp CAPSLOCK     &none            &kp F7  &kp F8  &kp F9  &kp F12                  &ctrl_b_p_tmux  &ctrl_b_tmux    &ctrl_b_w_tmux   &ctrl_b_n_tmux  &none       &caps_word
+                                          &trans  &trans  &trans                   &trans          &trans          &trans
             >;
         };
     };
