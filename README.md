@@ -13,16 +13,16 @@ My custom ZMK layout for Crone v4 — inspired by miryuko. Built and maintained 
 ## 🖼️ Keymap Layers
 
 ### 🅰️ Alphabet Layer
-![Alphabet Layer](IMAGE_URL)
+![Alphabet Layer](https://github.com/bentocodeing/zmk-config/blob/main/images/alphabet_layer.png)
 
 ### 🔢 Numbers Layer
-![Numbers Layer](IMAGE_URL)
+![Number Layer](https://github.com/bentocodeing/zmk-config/blob/main/images/number_layer.png)
 
 ### ⚙️ Symbols Layer
-![Symbols Layer](IMAGE_URL)
+![symbols Layer](https://github.com/bentocodeing/zmk-config/blob/main/images/symbol_layer.png)
 
 ### 🎛️ Functions Layer
-![Functions Layer](IMAGE_URL)
+![Functions Layer](https://github.com/bentocodeing/zmk-config/blob/main/images/function_layer.png)
 
 ## 📁 Structure
 - `config/` - Main configuration files
