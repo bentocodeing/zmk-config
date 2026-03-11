@@ -103,7 +103,7 @@
         compatible = "zmk,keymap";
 
         alphabet_layer {
-            display-name = "QWERTY";
+            display-name = "QWERTY (LAYER 0)";
 
             // --------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |  MUTE |  PP   |  Y  |  U   |  I  |  O  |  P  | BSPC |
@@ -122,7 +122,7 @@
         };
 
         number_layer {
-            display-name = "NUMBER";
+            display-name = "NUMBER (LAYER 1)";
 
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5    |  LCTRL | RCTRL |  6  |  7  |  8  |  9  |  0  | BSPC |
@@ -139,7 +139,7 @@
         };
 
         symbol_layer {
-            display-name = "SYMBOL";
+            display-name = "SYMBOL (LAYER 2)";
             bindings = <
 &kp TILDE      &kp LEFT_PARENTHESIS  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH   &kp RIGHT_PARENTHESIS  &trans  &trans  &kp GRAVE  &none   &none   &none  &none  &none
 &kp EQUAL      &kp LEFT_BRACKET      &kp DOLLAR       &kp PERCENT   &kp CARET  &kp RIGHT_BRACKET      &trans  &trans  &kp PLUS   &none   &none   &none  &none  &none
@@ -149,7 +149,7 @@
         };
 
         function_layer {
-            display-name = "FUNCTION";
+            display-name = "FUNCTION (LAYER 3)";
             bindings = <
 &rgb_ug RGB_TOG  &rgb_ug RGB_HUI  &kp F1  &kp F2  &kp F3  &kp F10  &trans  &trans  &none           &kp LS(K_COPY)  &kp LS(K_PASTE)  &kp LS(K_CUT)   &none       &none
 &bt BT_NXT       &rgb_ug RGB_EFF  &kp F4  &kp F5  &kp F6  &kp F11  &trans  &trans  &kp K_REDO      &kp K_COPY      &kp K_PASTE      &kp K_CUT       &kp K_UNDO  &none
