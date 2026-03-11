@@ -3,8 +3,6 @@
 My custom ZMK layout for Crone v4 — inspired by miryuko. Built and maintained by me.  
 🔧 Designed using [Nick Coutso’s Keymap Editor](https://nickcoutsos.github.io/keymap-editor/)
 
-## 🎯 Badges
-
 [![GitHub Repo stars](https://img.shields.io/github/stars/bentocoding/zmk-config?style=social)](https://github.com/bentocoding/zmk-config/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/bentocoding/zmk-config?style=social)](https://github.com/bentocoding/zmk-config/network/members)
 [![GitHub watchers](https://img.shields.io/github/watchers/bentocoding/zmk-config?style=social)](https://github.com/bentocoding/zmk-config/watchers)
