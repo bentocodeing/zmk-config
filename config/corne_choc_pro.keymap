@@ -131,10 +131,10 @@
             //                    | GUI |     | SPC   |        | ENT   |     | ALT |
 
             bindings = <
-&kp PLUS      &kp MINUS     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none      &none  &none  &kp HOME      &kp PAGE_DOWN      &kp PAGE_UP      &kp END             &kp INSERT  &kp PRINTSCREEN
-&kp ASTERISK  &kp KP_SLASH  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none      &none  &none  &kp LEFT      &kp DOWN           &kp UP           &kp RIGHT           &none       &none
-&kp PERCENT   &none         &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL                &kp C_REWIND  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_FAST_FORWARD  &kp K_MUTE  &none
-                                          &trans        &trans        &trans                   &trans        &trans             &trans
+&kp PLUS      &kp MINUS     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0  &none  &none  &kp HOME      &kp PAGE_DOWN      &kp PAGE_UP      &kp END             &kp INSERT  &kp PRINTSCREEN
+&kp ASTERISK  &kp KP_SLASH  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none         &none  &none  &kp LEFT      &kp DOWN           &kp UP           &kp RIGHT           &none       &none
+&kp PERCENT   &none         &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL                   &kp C_REWIND  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_FAST_FORWARD  &kp K_MUTE  &none
+                                          &trans        &trans        &trans                      &trans        &trans             &trans
             >;
         };
 
