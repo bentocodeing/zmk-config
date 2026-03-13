@@ -112,10 +112,10 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&kp MINUS       &kp Q  &kp W  &kp E                 &kp R             &kp T                &none  &none  &kp Y        &kp U            &kp I        &kp O    &kp P     &mt LEFT_PARENTHESIS LEFT_BRACKET
-&kp EQUAL       &kp A  &kp S  &kp D                 &kp F             &kp G                &none  &none  &kp H        &kp J            &kp K        &kp L    &kp SEMI  &kp SQT
-&kp LEFT_SHIFT  &kp Z  &kp X  &kp C                 &kp V             &kp B                              &kp N        &kp M            &kp COMMA    &kp DOT  &kp FSLH  &mt RIGHT_SHIFT BACKSLASH
-                              &mt LEFT_CONTROL ESC  &mt LEFT_ALT TAB  &mt LEFT_GUI DELETE                &lt 1 SPACE  &lt 2 BACKSPACE  &lt 3 ENTER
+&kp MINUS       &kp Q  &kp W  &kp E                 &kp R             &kp T               &none  &none  &kp Y        &kp U            &kp I         &kp O    &kp P     &mt LEFT_PARENTHESIS LEFT_BRACKET
+&kp EQUAL       &kp A  &kp S  &kp D                 &kp F             &kp G               &none  &none  &kp H        &kp J            &kp K         &kp L    &kp SEMI  &kp SQT
+&kp LEFT_SHIFT  &kp Z  &kp X  &kp C                 &kp V             &kp B                             &kp N        &kp M            &kp COMMA     &kp DOT  &kp FSLH  &mt RIGHT_SHIFT BACKSLASH
+                              &mt LEFT_CONTROL ESC  &mt LEFT_ALT TAB  &mt LEFT_GUI ENTER                &lt 1 SPACE  &lt 2 BACKSPACE  &lt 3 DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
